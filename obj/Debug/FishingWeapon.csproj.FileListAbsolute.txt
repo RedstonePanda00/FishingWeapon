@@ -1,0 +1,6 @@
+C:\Users\15858\OneDrive\Documents\Sundry\Rider\FishingWeapon\FishingWeapon\bin\Debug\FishingWeapon.dll
+C:\Users\15858\OneDrive\Documents\Sundry\Rider\FishingWeapon\FishingWeapon\bin\Debug\FishingWeapon.pdb
+C:\Users\15858\OneDrive\Documents\Sundry\Rider\FishingWeapon\FishingWeapon\obj\Debug\FishingWeapon.csproj.AssemblyReference.cache
+C:\Users\15858\OneDrive\Documents\Sundry\Rider\FishingWeapon\FishingWeapon\obj\Debug\FishingWeapon.csproj.CoreCompileInputs.cache
+C:\Users\15858\OneDrive\Documents\Sundry\Rider\FishingWeapon\FishingWeapon\obj\Debug\FishingWeapon.dll
+C:\Users\15858\OneDrive\Documents\Sundry\Rider\FishingWeapon\FishingWeapon\obj\Debug\FishingWeapon.pdb
