@@ -51,7 +51,7 @@
             <li>MeleePiercer</li>
         </weaponClasses>
         <graphicData>
-            <texPath>Things/Item/Equipment/WeaponMelee/Monosword</texPath> <!--贴图，自行更换-->
+            <texPath>Things/GreatSwordfish</texPath> <!--贴图，自行更换-->
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <tools> <!-- 数值 -->
@@ -104,7 +104,7 @@
         <equippedAngleOffset>-65</equippedAngleOffset>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Item/Equipment/WeaponMelee/Monosword</texPath>
+            <texPath>Things/GreatSwordfish</texPath>
             <color>(255,200,200)</color>
         </graphicData>
         <soundInteract>Interact_BladelinkMonoSword</soundInteract>
@@ -149,7 +149,7 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <!-- <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
         <defName>Test_FishLongSword</defName>
         <label>FishLongSword</label>
         <description>placeholder</description>
@@ -219,5 +219,5 @@
                 <regressionPerTickRare>0.05</regressionPerTickRare>
             </li>
         </comps>
-    </ThingDef>
+    </ThingDef> -->
 </Defs>
