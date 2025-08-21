@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Abstract="True" Name="MeleeWeaponFish" ParentName="BaseWeapon">
+        <techLevel>Ultra</techLevel>
+        <statBases>
+            <MarketValue>200</MarketValue>
+            <Mass>2</Mass>
+        </statBases>
+        <comps>
+            <!-- <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponMelee</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li> -->
+            <li Class="CompProperties_Biocodable" />
+        </comps>
+        <smeltable>true</smeltable>
+        <burnableByRecipe>true</burnableByRecipe>
+        <thingCategories>
+            <li>WeaponsMelee</li>
+        </thingCategories>
+        <weaponTags>
+            <li>FishWeaponMelee</li>
+            <li>Fish</li>
+        </weaponTags>
+        <tradeTags>
+            <li>WeaponMelee</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>Melee</li>
+        </weaponClasses>
+        <!-- <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags> -->
+    </ThingDef>
+
+    <ThingDef ParentName="MeleeWeaponFish">
+        <defName>FW_GreatSwordfish</defName>
+        <label>Swordfish GreatSword</label>
+        <description>As you can see, its a fish.</description>
+        <soundInteract>Interact_MonoSword</soundInteract>
+        <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <relicChance>3</relicChance>
+        <smeltable>false</smeltable>
+        <tickerType>Rare</tickerType> <!-- 重要，确保计算tick -->
+        <weaponClasses>
+            <li>MeleePiercer</li>
+        </weaponClasses>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/Monosword</texPath> <!--贴图，自行更换-->
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tools> <!-- 数值 -->
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>1.6</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>25</power>
+                <cooldownTime>2</cooldownTime>
+                <armorPenetration>0.9</armorPenetration>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>25</power>
+                <cooldownTime>2</cooldownTime>
+                <armorPenetration>0.9</armorPenetration>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FishingWeapon.CompProperties_TemperatureWeapon">
+                <maxTemp>0</maxTemp>
+                <minTemp>0</minTemp>
+                <targetWeaponDef>FW_PersonaGreatSwordfish</targetWeaponDef>
+                <progressPerTickRare>0.10</progressPerTickRare>
+                <regressionPerTickRare>0.05</regressionPerTickRare>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="MeleeWeaponFish">
+        <defName>FW_PersonaGreatSwordfish</defName>
+        <label>Forzen Swordfish GreatSword</label>
+        <description>Swordfish GreatSword</description>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+            <Mass>2</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Item/Equipment/WeaponMelee/Monosword</texPath>
+            <color>(255,200,200)</color>
+        </graphicData>
+        <soundInteract>Interact_BladelinkMonoSword</soundInteract>
+        <meleeHitSound>MeleeHit_BladelinkMonoSword</meleeHitSound>
+        <smeltable>false</smeltable>
+        <weaponClasses>
+            <li>Melee</li>
+            <li>MeleePiercer</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>1.6</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>27</power>
+                <cooldownTime>1.6</cooldownTime>
+                <armorPenetration>0.9</armorPenetration>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>27</power>
+                <cooldownTime>1.6</cooldownTime>
+                <armorPenetration>0.9</armorPenetration>
+            </li>
+        </tools>
+        <comps>
+            <li Class="CompProperties_BladelinkWeapon">
+                <biocodeOnEquip>true</biocodeOnEquip>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>Test_FishLongSword</defName>
+        <label>FishLongSword</label>
+        <description>placeholder</description>
+        <possessionCount>1</possessionCount>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/LongSword</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Medieval</techLevel>
+        <tickerType>Rare</tickerType>
+        <weaponTags>
+            <li>Fish</li>
+            <li>LongSword</li>
+        </weaponTags>
+        <costStuffCount>100</costStuffCount>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <WorkToMake>18000</WorkToMake>
+            <Mass>2</Mass>
+        </statBases>
+        <relicChance>2</relicChance>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>23</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>23</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisite>LongBlades</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <displayPriority>420</displayPriority>
+        </recipeMaker>
+        <comps>
+            <li Class="FishingWeapon.CompProperties_TemperatureWeapon">
+                <maxTemp>0</maxTemp>
+                <minTemp>0</minTemp>
+                <targetWeaponDef>MeleeWeapon_MonoSword</targetWeaponDef>
+                <progressPerTickRare>0.10</progressPerTickRare>
+                <regressionPerTickRare>0.05</regressionPerTickRare>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

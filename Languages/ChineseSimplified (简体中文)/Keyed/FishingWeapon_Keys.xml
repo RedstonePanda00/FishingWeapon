@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <TemperatureTooHigh>温度过高</TemperatureTooHigh>
+  <ChargeProgress>充能进度</ChargeProgress>
+
+  <WeaponTransformedLabel>武器转化</WeaponTransformedLabel>
+  <WeaponTransformedText>{0} 在寒霜中完成了充能，转化为了 {1}！</WeaponTransformedText>
+  
+</LanguageData>
