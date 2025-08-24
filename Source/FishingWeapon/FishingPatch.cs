@@ -20,9 +20,10 @@ namespace FishingWeaponMod
             __result.initAction = () =>
             {
                 originalAction?.Invoke();
-                if (Rand.Chance(1f))
+                if (Rand.Chance(FishingWeaponSettingsController.settings.specialFishChance)) //从设置中获取概率
                 {
                     TryAddSpecialFish(__instance.pawn, __instance.job.GetTarget(TargetIndex.A).Cell.GetZone(__instance.pawn.Map) as Zone_Fishing);
+                    Log.Message("[Fishing Weapon Test Log] got special fishing, current chance setting is:" + FishingWeaponSettingsController.settings.specialFishChance);
                 }
             };
         }
