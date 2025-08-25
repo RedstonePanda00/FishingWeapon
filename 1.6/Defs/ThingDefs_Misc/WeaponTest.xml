@@ -40,7 +40,7 @@
     <ThingDef ParentName="MeleeWeaponFish">
         <defName>FW_GreatSwordfish</defName>
         <label>Swordfish GreatSword</label>
-        <description>As you can see, its a fish.</description>
+        <description>来自热带和温带的大型海鱼，如果到达不曾探索过的北方，或许可以拥有更强的力量吧。</description>
         <soundInteract>Interact_MonoSword</soundInteract>
         <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
         <equippedAngleOffset>-65</equippedAngleOffset>
@@ -82,6 +82,26 @@
                 <armorPenetration>0.9</armorPenetration>
             </li>
         </tools>
+		<modExtensions>
+			<li Class="FishingWeapon.FishingExtraThingModextention">
+				<biomes>
+					<li>TropicalSwamp</li>
+					<li>TropicalRainforest</li>
+					<li>AridShrubland</li>
+					<li>ExtremeDesert</li>
+					<li>Desert</li>
+					<li>TemperateForest</li>
+					<li>TemperateSwamp</li>
+					<li>AridShrubland</li>
+					<li>Ocean</li>
+					<li>Lake</li>
+					<li MayRequire="Ludeon.RimWorld.Odyssey">Glowforest</li>
+					<li MayRequire="Ludeon.RimWorld.Odyssey">Grasslands</li>
+					<li MayRequire="Ludeon.RimWorld.Odyssey">LavaField</li>
+				</biomes>
+				<isSalt>Saltwater</isSalt>
+			</li>
+		</modExtensions>
         <comps>
             <li Class="FishingWeapon.CompProperties_TemperatureWeapon">
                 <maxTemp>0</maxTemp>
@@ -90,6 +110,9 @@
                 <progressPerTickRare>0.10</progressPerTickRare>
                 <regressionPerTickRare>0.05</regressionPerTickRare>
             </li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
         </comps>
     </ThingDef>
 
@@ -97,6 +120,7 @@
         <defName>FW_PersonaGreatSwordfish</defName>
         <label>Forzen Swordfish GreatSword</label>
         <description>Swordfish GreatSword</description>
+		<description>现在，你得到了寒冰之力。</description>
         <statBases>
             <MarketValue>3000</MarketValue>
             <Mass>2</Mass>
